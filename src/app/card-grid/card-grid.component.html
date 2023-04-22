@@ -1,10 +1,129 @@
-<div class="row">
-  <div class="col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let card of cards">
+<div
+  class="container"
+  style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  "
+>
+  <div
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      width: 50%;
+    "
+  >
+    <div style="margin-right: 10px; font-weight: bold">Filter</div>
+    <div
+      class="btn-group"
+      role="group"
+      aria-label="Basic checkbox toggle button group"
+    >
+      <div
+        class="btn-group"
+        role="group"
+        aria-label="Basic radio toggle button group"
+      >
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio1"
+          autocomplete="off"
+          checked
+          (click)="onClick('All')"
+        />
+        <label class="btn btn-outline-primary" for="btnradio1">All</label>
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio2"
+          autocomplete="off"
+          (click)="onClick('North Kolkata')"
+        />
+        <label class="btn btn-outline-primary" for="btnradio2"
+          >North Kolkata</label
+        >
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio3"
+          autocomplete="off"
+          (click)="onClick('South Kolkata')"
+        />
+        <label class="btn btn-outline-primary" for="btnradio3"
+          >South Kolkata</label
+        >
+      </div>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center">
+    <form
+      #userlogin="ngForm"
+      (ngSubmit)="onClickSubmit(userlogin.value)"
+      style="display: flex; flex-direction: row"
+    >
+      <div class="form-group">
+        <div style="display: flex; flex-direction: row">
+          <input
+            type="text"
+            class="form-control mt-2"
+            id="schoolNameInput"
+            placeholder="Enter School Name"
+            name="schoolName"
+            required
+            ngModel
+            style="
+              border-radius: 5px;
+              border: 1px solid #ccc;
+              padding: 10px;
+              margin-right: 10px;
+            "
+          />
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary mt-2"
+        style="border-radius: 5px; padding: 10px"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+
+<div
+  class="row"
+  style="
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  "
+>
+  <div
+    class="col-sm-6 col-md-4 col-lg-3 mb-4"
+    *ngFor="let card of selectedCards"
+  >
     <div class="card">
       <img [src]="card.image" class="card-img-top" alt="temp_image" />
       <div class="card-body">
         <h5 class="card-title">{{ card.title }}</h5>
         <p class="card-text">{{ card.text }}</p>
+        <p class="card-text">{{ card.place }}</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
