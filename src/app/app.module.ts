@@ -14,7 +14,10 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: LoginFormComponent, canActivate: [AuthGuard] },
-  { path: 'landing-page', component: LandingPageComponent },
+  {
+    path: 'landing-page',
+    component: LandingPageComponent,
+  },
 ];
 
 @NgModule({
