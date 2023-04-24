@@ -13,63 +13,73 @@ interface Card {
   styleUrls: ['./card-grid.component.css'],
 })
 export class CardGridComponent {
+  image1: string = '/assets/image1.jpg';
+  image2: string = '/assets/image2.jpg';
+  image3: string = '/assets/image3.jpg';
+  image4: string = '/assets/image4.jpg';
+  image5: string = '/assets/image5.jpg';
+  image6: string = '/assets/image6.jpg';
+  image7: string = '/assets/image7.jpg';
+  image8: string = '/assets/image8.jpg';
+  image9: string = '/assets/image9.jpg';
+  image10: string = '/assets/images10.jpg';
   cards: Card[] = [
     {
-      image: 'https://picsum.photos/id/1/200/200',
+      image: this.image1,
       title: 'St.Stephens School',
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       place: 'North Kolkata',
     },
     {
-      image: 'https://picsum.photos/id/2/200/200',
+      image: this.image2,
       title: 'Card title 2',
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       place: 'South Kolkata',
     },
     {
-      image: 'https://picsum.photos/id/3/200/200',
+      image: this.image3,
       title: 'Card title 3',
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       place: 'North Kolkata',
     },
     {
-      image: 'https://picsum.photos/id/4/200/200',
+      image: this.image4,
       title: 'Card title 4',
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       place: 'South Kolkata',
     },
     {
-      image: 'https://picsum.photos/id/5/200/200',
+      image: this.image5,
       title: 'Card title 5',
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       place: 'North Kolkata',
     },
     {
-      image: 'https://picsum.photos/id/6/200/200',
+      image: this.image6,
       title: 'Card title 6',
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       place: 'South Kolkata',
     },
     {
-      image: 'https://picsum.photos/id/7/200/200',
+      image: this.image7,
       title: 'Card title 7',
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       place: 'North Kolkata',
     },
     {
-      image: 'https://picsum.photos/id/8/200/200',
+      image: this.image8,
       title: 'Card title 8',
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       place: 'South Kolkata',
     },
     {
-      image: 'https://picsum.photos/id/9/200/200',
+      image: this.image9,
       title: 'Card title 9',
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       place: 'North Kolkata',
     },
     {
-      image: 'https://picsum.photos/id/10/200/200',
+      image: this.image10,
       title: 'Card title 10',
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       place: 'South Kolkata',
