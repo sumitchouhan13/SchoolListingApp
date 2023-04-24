@@ -16,7 +16,7 @@ export class CardGridComponent {
   cards: Card[] = [
     {
       image: 'https://picsum.photos/id/1/200/200',
-      title: 'Card title 1',
+      title: 'St.Stephens School',
       text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
       place: 'North Kolkata',
     },
