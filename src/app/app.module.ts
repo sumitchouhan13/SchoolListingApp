@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CardGridComponent } from './card-grid/card-grid.component';
 import { AuthGuard } from './auth.guard';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: '', component: LoginFormComponent, canActivate: [AuthGuard] },
@@ -27,6 +28,7 @@ const routes: Routes = [
     LoginFormComponent,
     LandingPageComponent,
     CardGridComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
